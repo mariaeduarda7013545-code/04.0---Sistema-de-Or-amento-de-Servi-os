@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechFix Informática - Orçamento</title>
+
+    <!-- Ligação com o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>TechFix Informática</h1>
+        <p>Manutenção e serviços para seu computador</p>
+    </header>
+
+    <!-- Área principal -->
+    <main>
+
+        <section class="orcamento">
+
+            <h2>Solicite seu orçamento</h2>
+
+            <!-- Campo para o nome do cliente -->
+            <label for="nome">Nome do cliente:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+
+            <!-- Seleção do serviço -->
+            <label for="servico">Escolha o serviço:</label>
+
+            <select id="servico">
+                <option value="">Selecione um serviço</option>
+                <option value="formatacao">Formatação de computador</option>
+                <option value="limpeza">Limpeza e manutenção</option>
+                <option value="programas">Instalação de programas</option>
+                <option value="backup">Backup de arquivos</option>
+            </select>
+
+            <!-- Botão que executa a função calcularOrcamento() -->
+            <button onclick="calcularOrcamento()">
+                Calcular Orçamento
+            </button>
+
+            <!-- Área onde o resultado será apresentado -->
+            <div id="resultado"></div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>2026 TechFix Informática - Todos os direitos reservados.</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        // Função responsável por calcular o orçamento
+        function calcularOrcamento() {
+
+            // Pegando os valores digitados/selecionados pelo usuário
+            let nome = document.getElementById("nome").value;
+            let servico = document.getElementById("servico").value;
+
+            // Variável que armazenará o preço do serviço
+            let valor;
+
+            // Estrutura condicional para descobrir o preço
+            if (servico == "formatacao") {
+
+                valor = 120;
+
+            } else if (servico == "limpeza") {
+
+                valor = 80;
+
+            } else if (servico == "programas") {
+
+                valor = 50;
+
+            } else if (servico == "backup") {
+
+                valor = 100;
+
+            } else {
+
+                // Caso nenhum serviço seja selecionado
+                document.getElementById("resultado").innerHTML =
+                    "<p>Por favor, selecione um serviço.</p>";
+
+                return;
+            }
+
+            // Verifica se o nome foi preenchido
+            if (nome == "") {
+
+                document.getElementById("resultado").innerHTML =
+                    "<p>Por favor, digite seu nome.</p>";
+
+                return;
+            }
+
+            // Exibe o resultado dentro da própria página
+            document.getElementById("resultado").innerHTML =
+                "<h3>Orçamento</h3>" +
+                "<p>Cliente: <strong>" + nome + "</strong></p>" +
+                "<p>Serviço: <strong>" + servico.replace("formatacao", "Formatação de computador")
+                .replace("limpeza", "Limpeza e manutenção")
+                .replace("programas", "Instalação de programas")
+                .replace("backup", "Backup de arquivos") + "</strong></p>" +
+                "<p>Valor: <strong>R$ " + valor.toFixed(2).replace(".", ",") + "</strong></p>";
+        }
+
+    </script>
+
+</body>
+
+</html>

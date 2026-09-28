@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f4f7;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #123b63;
+    color: white;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Área principal */
+main {
+    padding: 40px 20px;
+}
+
+/* Caixa do orçamento */
+.orcamento {
+    background-color: white;
+    width: 400px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Título */
+.orcamento h2 {
+    color: #123b63;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Campos de entrada e seleção */
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px;
+    background-color: #123b63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Alteração visual ao passar o mouse */
+button:hover {
+    background-color: #1d609d;
+}
+
+/* Área do resultado */
+#resultado {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #eaf3fa;
+    border: 1px solid #b8d3e8;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#resultado h3 {
+    color: #123b63;
+}
+
+/* Rodapé */
+footer {
+    background-color: #123b63;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Área principal com imagem de fundo */
+main {
+    padding: 60px 20px;
+    background-image: url("Tec02.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
